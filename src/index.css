@@ -1,0 +1,92 @@
+/* Core Design Tokens & Reset */
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', var(--font-sans);
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+
+  /* App Shell Color Palette (Modern Dark / Obsidian) */
+  --shell-bg: #0b0f19;
+  --shell-surface: #111827;
+  --shell-surface-elevated: #1f2937;
+  --shell-surface-subtle: #192231;
+  --shell-border: #233146;
+  --shell-border-subtle: #1e293b;
+  --shell-text: #f1f5f9;
+  --shell-text-muted: #94a3b8;
+  --shell-text-subtle: #64748b;
+
+  /* Accent Colors */
+  --brand-primary: #2563eb;
+  --brand-primary-hover: #1d4ed8;
+  --brand-gradient: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  --brand-glow: rgba(37, 99, 235, 0.35);
+
+  --accent-success: #10b981;
+  --accent-success-hover: #059669;
+  --accent-warning: #f59e0b;
+  --accent-danger: #ef4444;
+
+  /* Preview Canvas Sheet Backdrop */
+  --canvas-bg: #e2e8f0;
+  --canvas-pattern: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
+  --page-sheet-bg: #ffffff;
+  --page-sheet-shadow: 0 20px 45px -12px rgba(15, 23, 42, 0.22), 0 0 1px rgba(15, 23, 42, 0.15);
+
+  /* Radius & Transitions */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-sans);
+  background-color: var(--shell-bg);
+  color: var(--shell-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.45);
+}
